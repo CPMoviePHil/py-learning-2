@@ -49,3 +49,10 @@ for values in obj_1.values():
 # 施明德
 # abc
 # 20
+
+# following code block can't not get the result as  "for k, v in obj_1.items()"
+# because items() return a tuple of the key and the the value pair
+# so if we call it with func enumerate(which return index and value), only get the index of tuple, not the key
+for index, values in enumerate(obj_1):
+    print(index, values)
+
